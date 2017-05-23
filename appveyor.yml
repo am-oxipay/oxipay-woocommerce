@@ -1,7 +1,7 @@
 branches:
   only:
     - master
-skip_tags: false
+skip_non_tags: true
 environment:
   release_name: "oxipay-woocommerce_v%appveyor_build_version%.zip"
 build_script:
@@ -15,7 +15,7 @@ deploy:
   description: $(APPVEYOR_REPO_COMMIT_MESSAGE)
   provider: GitHub
   auth_token:
-    secure: 56NAOqpMQYkuaKqIWixuwuHbYK+1VYaGXQITooXcBLAL1b5xYAAENylYsXh029zy
+    secure: a9f3e4d0f691412d938a9c183f9298b7da6354eb
   artifact: /.*\.zip/
   draft: false
   prerelease: false
